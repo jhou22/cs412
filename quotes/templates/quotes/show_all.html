@@ -1,0 +1,21 @@
+<!-- quotes/templates/quotes/show_all.html -->
+{% extends 'quotes/base.html' %} {% block content %}
+
+
+<div>
+    <h1>Sun Tzu Quotes</h1>
+  <div>
+    {% for quote in all_quotes %}
+    <h2>"{{ quote }}"</h2>
+    {% endfor %}
+  </div>
+  <h1>Sun Tzu Pictures</h1>
+  <table>
+    <tr>
+    {% for image in all_images %}
+    <td><img src={{image}} width="200" height="300"/></td>
+    {% endfor %}
+    </tr>
+  </table>
+</div>
+{%endblock%}
